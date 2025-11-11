@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Priya Tiwari — Portfolio</title>
+  <style>
+    :root{
+      --bg:#f8fafc;
+      --card:#fff;
+      --accent-1:#f6d9f0;
+      --accent-2:#d9f6ef;
+      --accent-3:#e6e9ff;
+      --muted:#8b8792;
+      --shadow: 0 6px 18px rgba(20,20,30,0.06);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#222;background:linear-gradient(180deg,var(--bg), #fff);display:flex;flex-direction:column;}
+
+    header{position:fixed;left:0;right:0;top:0;backdrop-filter: blur(6px);background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));border-bottom:1px solid rgba(0,0,0,0.03);z-index:40}
+    .container{width:min(1200px,96%);margin:0 auto;padding:18px 0;display:flex;gap:18px;align-items:center}
+    .brand{font-weight:700;letter-spacing:0.2px}
+    nav{margin-left:auto}
+    nav a{margin:0 8px;text-decoration:none;padding:8px;border-radius:8px;color:var(--muted);font-weight:600}
+    nav a:hover{color:#111;background:linear-gradient(90deg,var(--accent-1),var(--accent-3));}
+
+    main{flex:1;padding-top:100px;width:min(1200px,96%);margin:0 auto;}
+
+    .hero{display:flex;gap:30px;align-items:center;padding:44px 0}
+    .hero .left{flex:1}
+    .hero h1{font-size:clamp(22px,4.4vw,36px);margin:0 0 8px}
+    .hero p{margin:0 0 14px;color:var(--muted)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700;background:linear-gradient(90deg,var(--accent-2),var(--accent-3));box-shadow:var(--shadow)}
+
+    .profile{width:240px;height:300px;border-radius:16px;overflow:hidden;flex-shrink:0;border:8px solid rgba(255,255,255,0.6);box-shadow:0 12px 30px rgba(0,0,0,0.07);display:flex;align-items:center;justify-content:center}
+    .profile img{width:100%;height:100%;object-fit:cover;display:block}
+
+    section{margin:28px 0;padding:32px;border-radius:16px;background:linear-gradient(180deg,var(--card),#fff);box-shadow:var(--shadow)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .card{padding:16px;border-radius:12px;background:transparent}
+
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .timeline .item{padding:12px;border-radius:10px;background:linear-gradient(90deg,rgba(230,233,255,0.6), rgba(246,217,240,0.6));}
+
+    .feedback-list{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .feedback-item{padding:12px;border-radius:10px;background:linear-gradient(90deg,var(--accent-2),var(--accent-3));display:flex;justify-content:space-between;align-items:flex-start}
+    .feedback-item small{color:var(--muted)}
+    .del{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:6px;border-radius:8px;cursor:pointer}
+
+    .admin-bar{display:flex;gap:8px;align-items:center;margin-top:8px}
+
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    footer{color:var(--muted);padding:20px 0;text-align:center;margin-top:auto;background:#fff;border-top:1px solid rgba(0,0,0,0.05)}
+
+    @media (max-width:720px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .profile{width:100%;height:260px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">Priya Tiwari</div>
+      <nav>
+        <a href="#intro">Intro</a>
+        <a href="#qual">Qualification</a>
+        <a href="#work">Experience</a>
+        <a href="#hobbies">Skills</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="intro">
+      <div class="left reveal">
+        <h1>Hi, I'm Priya Tiwari — MERN-stack Developer</h1>
+        <p>Full Stack Developer with a knack for crafting seamless digital experiences. Experienced through real-world projects
+and an internship in modern web development.</p>
+        <p></p>
+        <a class="btn" href="#work">See my work</a>
+      </div>
+      <div class="profile reveal">
+        <img src="images/priya.jpg" alt="Priya's photo" id="profilePic">
+      </div>
+    </section>
+
+    <section id="qual" class="reveal">
+      <h2>Qualification</h2>
+      <div class="timeline">
+        <div class="item">Bachelor of Computer Application (2022-2025)</div>
+        <div class="item">Bacgelor of Science (2023-2026)</div>
+        <div class="item">MERN-Stack developement Certificate(2024-2025)</div>
+        <div class="item">Certificate in Japanese(2025-2026)</div>
+      </div>
+    </section>
+
+    <section id="work" class="reveal">
+      <h2>Work Experience</h2>
+      <div class="grid">
+         <div class="card">
+          <h3>Intern at FosterAI Technologies</h3>
+          <p>Explored full-stack development through an immersive MERN Stack internship.</p>
+        </div>
+        <div class="card">
+          <h3>AdidaEvents.com</h3>
+          <p>Event management website built during internship. Features: event listing, RSVP flow, admin dashboard (intern project).</p>
+        </div>
+        <div class="card">
+          <h3>Personal Projects</h3>
+          <p>Portfolio, small utilities, and practice apps using HTML, CSS and JavaScripts for experiments.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobbies" class="reveal">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">ReactJS</div>
+        <div class="card">OracleApex</div>
+        <div class="card">MySQL</div>
+        <div class="card">MongoDB</div>
+      </div>
+    </section>
+
+    <section id="feedback" class="reveal">
+      <h2>Feedback</h2>
+      <p>Leave your feedback — </p>
+      <form id="fbForm">
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <input type="text" id="fbName" placeholder="Your name" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+          <input type="text" id="fbRole" placeholder="Role (optional)" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+        </div>
+        <textarea id="fbMsg" rows="3" placeholder="Your feedback..." style="width:100%;margin-top:8px;padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.06)" required></textarea>
+        <div style="display:flex;gap:8px;margin-top:8px;align-items:center">
+          <button type="submit" class="btn">Submit</button>
+          <button type="button" id="clearAll" class="del">Clear all (admin)</button>
+        </div>
+      </form>
+
+      <div class="admin-bar">
+        <button id="adminToggle" class="del">Enter Admin Mode</button>
+        <small style="color:var(--muted)"></small>
+      </div>
+
+      <div class="feedback-list" id="feedbackList"></div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Priya Tiwari — Built with HTML/CSS/JS
+  </footer>
+
+  <script>
+    const ADMIN_PASSWORD = '11042004';
+    const qs=(s)=>document.querySelector(s);
+    const qsa=(s)=>Array.from(document.querySelectorAll(s));
+
+    const reveals = qsa('.reveal');
+    const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); }); },{threshold:0.12});
+    reveals.forEach(el=>io.observe(el));
+
+    qsa('nav a').forEach(a=>a.addEventListener('click', e=>{ e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'}); }));
+
+    const FB_KEY = 'portfolio_feedbacks_v1';
+    function getFeedbacks(){ return JSON.parse(localStorage.getItem(FB_KEY) || '[]'); }
+    function saveFeedbacks(arr){ localStorage.setItem(FB_KEY, JSON.stringify(arr)); }
+    function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+    let adminMode=false;
+    function renderFeedbacks(){
+      const list = qs('#feedbackList'); list.innerHTML='';
+      const fbs = getFeedbacks();
+      if(!fbs.length){ list.innerHTML = '<small style="color:var(--muted)">No feedback yet — be the first!</small>'; return }
+      fbs.forEach((fb,i)=>{
+        const el=document.createElement('div'); el.className='feedback-item';
+        el.innerHTML=`<div><strong>${escapeHtml(fb.name||'Anonymous')}</strong> <small>• ${escapeHtml(fb.role||'')}</small><div style="margin-top:6px">${escapeHtml(fb.msg)}</div><small style="display:block;margin-top:8px;color:var(--muted);font-size:12px">${new Date(fb.ts).toLocaleString()}</small></div>`;
+        const del=document.createElement('button'); del.className='del'; del.textContent='Delete'; del.style.display=adminMode?'inline-block':'none';
+        del.addEventListener('click',()=>{if(confirm('Delete this feedback?')){const a=getFeedbacks(); a.splice(i,1); saveFeedbacks(a); renderFeedbacks();}});
+        el.appendChild(del); list.appendChild(el);
+      });
+    }
+
+    qs('#fbForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      const name=qs('#fbName').value.trim();
+      const role=qs('#fbRole').value.trim();
+      const msg=qs('#fbMsg').value.trim();
+      if(!msg)return;
+      const fbs=getFeedbacks();
+      fbs.unshift({name, role, msg, ts:Date.now()});
+      saveFeedbacks(fbs); qs('#fbForm').reset(); renderFeedbacks();
+    });
+
+    qs('#adminToggle').addEventListener('click',()=>{
+      const attempt=prompt('Enter admin passphrase:');
+      if(attempt===ADMIN_PASSWORD){adminMode=!adminMode;qs('#adminToggle').textContent=adminMode?'Exit Admin Mode':'Enter Admin Mode';renderFeedbacks();alert('Admin mode: '+(adminMode?'ENABLED':'DISABLED'))}else if(attempt!==null)alert('Wrong passphrase');
+    });
+
+    qs('#clearAll').addEventListener('click',()=>{if(!adminMode){alert('Enable admin mode first');return;}if(confirm('Delete ALL feedbacks?')){localStorage.removeItem(FB_KEY);renderFeedbacks();}});
+
+    renderFeedbacks();
+    qs('#year').textContent=new Date().getFullYear();
+    const p=qs('#profilePic');p.addEventListener('error',()=>{p.src='https://via.placeholder.com/300x400.png?text=Your+Photo';});
+  </script>
+</body>
+</html>
